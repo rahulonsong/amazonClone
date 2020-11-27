@@ -3,10 +3,8 @@ const multer = require('multer')
 const multerS3 = require('multer-s3')
 
 aws.config.update({
-  // region: 'us-east-2',
   secretAccessKey: process.env.AWSSecretKey,
   accessKeyId: process.env.AWSAccessKeyId
-  // endpoint: 'http://localhost:3000'
 })
 
 const s3 = new aws.S3()
