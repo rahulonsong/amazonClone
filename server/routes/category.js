@@ -6,9 +6,7 @@ const Category = require('../models/category')
 router.post('/categories', async (req, res) => {
   try {
     const category = new Category()
-    category.name = req.body.name
-    category.about = req.body.about
-    category.photo = req.body.photo
+    category.type = req.body.type
 
     await category.save()
 

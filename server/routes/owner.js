@@ -4,7 +4,7 @@ const upload = require('../middlewares/upload-photo')
 
 // POST request
 
-router.post('/owner', upload.single('photo'), async (req, res) => {
+router.post('/owners', upload.single('photo'), async (req, res) => {
   try {
     const owner = new Owner()
     owner.name = req.body.name
